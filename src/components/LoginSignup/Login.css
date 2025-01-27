@@ -1,0 +1,128 @@
+/* Container styles */
+.login-signup-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 25px;
+  background: linear-gradient(145deg, #fffbf2, #ffe0b2);
+  border-radius: 15px;
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form heading */
+.login-signup-container h2 {
+  margin-bottom: 25px;
+  color: #ff6f61;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  animation: slideInFromLeft 1.2s ease-out;
+}
+
+/* Input fields */
+.login-signup-container input[type="text"],
+.login-signup-container input[type="email"],
+.login-signup-container input[type="password"] {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 20px;
+  border: 2px solid #ffd5c2;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff7f2;
+  color: #333;
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+.login-signup-container input:focus {
+  border-color: #ff6f61;
+  outline: none;
+  box-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
+}
+
+/* Buttons */
+.login-signup-container button {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(145deg, #ff6f61, #ff3b2c);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.2), -6px -6px 14px rgba(255, 255, 255, 0.8);
+}
+
+.login-signup-container button:hover {
+  background: linear-gradient(145deg, #ff3b2c, #ff6f61);
+  transform: scale(1.05);
+  box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.3), -8px -8px 18px rgba(255, 255, 255, 0.9);
+}
+
+.login-signup-container button:active {
+  transform: scale(0.98);
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+}
+
+/* Links */
+.login-signup-container a {
+  color: #ff3b2c;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.login-signup-container a:hover {
+  color: #ff6f61;
+  text-decoration: underline;
+}
+
+/* Animation effect for heading */
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation effect for form elements */
+.login-signup-container input,
+.login-signup-container button {
+  animation: fadeInBounce 1.2s ease-out;
+}
+
+@keyframes fadeInBounce {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile-friendly adjustments */
+@media (max-width: 600px) {
+  .login-signup-container {
+    padding: 15px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+}

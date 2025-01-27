@@ -1,0 +1,65 @@
+/* Reset some basic styles for cross-browser consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Set up a basic font and background for the whole app */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Center the content on the screen */
+  html, body, #root {
+    height: 100%;
+  }
+  
+  /* Global container for the app */
+  #root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100%;
+  }
+  
+  /* Style for links globally */
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Provide some space for elements */
+  h1, h2, h3, p {
+    margin: 10px 0;
+  }
+  
+  /* General button styling */
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Add responsiveness for small screens */
+  @media (max-width: 600px) {
+    .login-container, .signup-page, .dashboard, .sidebar {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+  
