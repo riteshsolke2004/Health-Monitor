@@ -6,25 +6,32 @@ import Dashboard from "./components/Dashboard/Dashboard";
 import Footer from "./components/Footer/Footer";
 import Profile from "./components/Profile/Profile";
 import LoginSignup from "./components/LoginSignup/Login";
+import Recommendations from "./components/Recommendations/Recommendations"; // Import Recommendations page
 import "./App.css";
 
 const App = () => {
   return (
     <Router>
       <div className="app-container">
+        {/* Sidebar */}
         <Sidebar />
+
+        {/* Main Content */}
         <div className="main-content">
           <Header />
           <Routes>
+            {/* Route Definitions */}
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<LoginSignup />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/recommendations" element={<Recommendations />} /> {/* Add Recommendations Route */}
           </Routes>
         </div>
       </div>
-      <Footer/>
+
+      {/* Footer */}
+      <Footer />
     </Router>
-    
   );
 };
 

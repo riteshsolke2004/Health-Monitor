@@ -17,7 +17,7 @@ const Header = () => {
 
   return (
     <div className="header">
-      <h1>Disease Prediction </h1>
+      <h2>Disease Prediction </h2>
       <div className="header-actions">
         <input type="text" placeholder="Search..." />
         <span className="icon">🔔</span>
