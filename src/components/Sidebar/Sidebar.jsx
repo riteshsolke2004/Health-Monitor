@@ -19,7 +19,7 @@ const Sidebar = () => {
 
       {/* Sidebar */}
       <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-        <h2>Dashboard</h2>
+        <h2 >Dashboard</h2>
         <ul>
           <li>
             <img src="Interactive.png" alt="Interactive" />

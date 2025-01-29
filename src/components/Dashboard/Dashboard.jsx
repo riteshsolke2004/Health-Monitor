@@ -1,7 +1,10 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Dashboard.css";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="dashboard">
       {/* Overview Section */}
@@ -31,19 +34,19 @@ const Dashboard = () => {
       <div className="dashboard-section">
         <h2>Health Education</h2>
         <div className="grid-container">
-          <div className="box">
+          <div className="box" onClick={() => navigate("/skin-care")}>
             <h4>Skin Care 101</h4>
             <p>Learn the basics of keeping your skin healthy.</p>
           </div>
-          <div className="box">
+          <div className="box" onClick={() => navigate("/protect-your-skin")}>
             <h4>Protect Your Skin</h4>
             <p>Tips to protect your skin from harmful UV rays.</p>
           </div>
-          <div className="box">
+          <div className="box" onClick={() => navigate("/healthy-snacks")}>
             <h4>Healthy Snacks</h4>
             <p>Discover nutritious and tasty snack options.</p>
           </div>
-          <div className="box">
+          <div className="box" onClick={() => navigate("/doctor-insights")}>
             <h4>Doctor Insights</h4>
             <p>Expert advice for maintaining a healthy lifestyle.</p>
           </div>
