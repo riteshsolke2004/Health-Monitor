@@ -2,48 +2,46 @@ import React, { useState } from "react";
 import "./Login.css";
 
 const LoginSignup = () => {
-  const [isLogin, setIsLogin] = useState(true); // Toggle between Login and Signup
-
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    if (isLogin) {
-      console.log("User logged in");
-    } else {
-      console.log("User signed up");
-    }
-  };
+  const [isLogin, setIsLogin] = useState(true); // Toggle between login and signup
 
   return (
-    <div className="login-signup-container">
-      <h2>{isLogin ? "Login" : "Sign Up"}</h2>
-      <form onSubmit={handleFormSubmit} className="form-container">
-        {!isLogin && (
-          <div>
-            <label>Full Name:</label>
-            <input type="text" placeholder="Enter your full name" required />
+    <div className="loginsignup">
+      <div className="loginsignup-wrapper">
+        {/* Left Section */}
+        <div className="loginsignup-left">
+          <h2>{isLogin ? "Welcome Back!" : "Join Us Today!"}</h2>
+          <p>
+            {isLogin
+              ? "Login to access your account and explore health insights."
+              : "Sign up to manage your health and get personalized recommendations!"}
+          </p>
+          <button onClick={() => setIsLogin(!isLogin)}>
+            {isLogin ? "Sign Up" : "Login"}
+          </button>
+        </div>
+
+        {/* Right Section */}
+        <div className="loginsignup-right">
+          <h1>{isLogin ? "Login" : "Sign Up"}</h1>
+          <div className="loginsignup-fields">
+            {!isLogin && <input type="text" placeholder="Full Name" />}
+            <input type="email" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
           </div>
-        )}
-        <div>
-          <label>Email:</label>
-          <input type="email" placeholder="Enter your email" required />
+          <button>{isLogin ? "Login" : "Sign Up"}</button>
+          {isLogin ? (
+            <p>
+              Don't have an account?{" "}
+              <span onClick={() => setIsLogin(false)}>Sign Up</span>
+            </p>
+          ) : (
+            <p>
+              Already have an account?{" "}
+              <span onClick={() => setIsLogin(true)}>Login</span>
+            </p>
+          )}
         </div>
-        <div>
-          <label>Password:</label>
-          <input type="password" placeholder="Enter your password" required />
-        </div>
-        <button type="submit" className="submit-button">
-          {isLogin ? "Login" : "Sign Up"}
-        </button>
-      </form>
-      <p className="toggle-text">
-        {isLogin ? "Don't have an account?" : "Already have an account?"}{" "}
-        <button
-          className="toggle-button"
-          onClick={() => setIsLogin(!isLogin)}
-        >
-          {isLogin ? "Sign Up" : "Login"}
-        </button>
-      </p>
+      </div>
     </div>
   );
 };

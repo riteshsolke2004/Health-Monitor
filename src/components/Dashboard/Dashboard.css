@@ -1,29 +1,37 @@
+/* Full-Screen Dashboard */
 .dashboard {
-  padding: 20px;
+  width: 100vw; /* Full screen width */
+  min-height: 100vh;
+  padding: 20px 40px;
   background-color: #f4f4f9;
+  margin-top: 80px; /* To match header height */
 }
 
+/* Dashboard Sections */
 .dashboard-section {
   margin-bottom: 40px;
 }
 
 .dashboard-section h2 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   margin-bottom: 20px;
   color: #333;
+  text-align: center;
 }
 
+/* Grid Layout */
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
+/* Box Styling */
 .box {
   background: #ffffff;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 25px;
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -35,18 +43,64 @@
 }
 
 .box h4 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #007bff;
   margin-bottom: 10px;
 }
 
 .box p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #555;
 }
 
+/* 📌 Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard {
+      padding: 20px;
+  }
+}
+
 @media (max-width: 768px) {
+  .dashboard {
+      padding: 15px;
+  }
+
+  .dashboard-section h2 {
+      font-size: 1.5rem;
+  }
+
   .grid-container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .box {
+      padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+      padding: 10px;
+  }
+
+  .dashboard-section h2 {
+      font-size: 1.3rem;
+  }
+
+  .grid-container {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+  }
+
+  .box {
+      padding: 15px;
+  }
+
+  .box h4 {
+      font-size: 1.2rem;
+  }
+
+  .box p {
+      font-size: 1rem;
   }
 }

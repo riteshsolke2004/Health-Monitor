@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { RiLogoutBoxRLine } from "react-icons/ri";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,12 +14,12 @@ const Sidebar = () => {
     <div>
       {/* Toggle Button */}
       <button className="toggle-button" onClick={toggleSidebar}>
-        {isOpen ? "=" : "="}
+        {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
       {/* Sidebar */}
       <div className={`sidebar ${isOpen ? "open" : "closed"}`}>
-        <h2>Sidebar</h2>
+        <h2>Dashboard</h2>
         <ul>
           <li>
             <img src="Interactive.png" alt="Interactive" />
@@ -46,7 +48,9 @@ const Sidebar = () => {
             Chatbot
           </li>
         </ul>
-        <button className="logout-button">Log Out</button>
+        <button className="logout-button">
+          <RiLogoutBoxRLine /> Log Out
+        </button>
       </div>
     </div>
   );

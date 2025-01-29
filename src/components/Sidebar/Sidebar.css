@@ -5,10 +5,12 @@
   left: 0;
   height: 100%;
   width: 250px;
-  background-color:black;
+  background-color: #007bff; /* Medical-themed blue */
   color: white;
   overflow-y: auto;
   transition: transform 0.3s ease-in-out;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+  padding-top: 20px;
 }
 
 /* Initially closed sidebar */
@@ -21,69 +23,125 @@
   transform: translateX(0);
 }
 
-/* Sidebar contents */
+/* Sidebar title */
 .sidebar h2 {
-  padding: 1rem;
   text-align: center;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
 }
 
+/* Sidebar menu */
 .sidebar ul {
-  list-style-type: none;
+  list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.sidebar li {
-  padding: 0.5rem 1rem;
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background 0.3s ease;
+  border-radius: 5px;
 }
 
-.sidebar li:hover {
-  background-color: #34495e;
+.sidebar ul li img {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+.sidebar ul li:hover {
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Logout button */
 .logout-button {
-  margin: 1rem;
-  padding: 0.5rem 1rem;
-  width: calc(100% - 2rem);
-  background-color: #e74c3c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: calc(100% - 40px);
+  margin: 20px auto;
+  padding: 10px;
+  background-color: #dc3545;
   color: white;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .logout-button:hover {
-  background-color: #c0392b;
+  background-color: #c82333;
+}
+
+.logout-button svg {
+  margin-right: 8px;
 }
 
 /* Toggle button */
 .toggle-button {
   position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 1000;
-  background-color: #2c3e50;
+  top: 15px;
+  left: 15px;
+  background: #007bff;
   color: white;
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 10px;
+  font-size: 20px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background 0.3s ease;
+  z-index: 1001;
 }
 
 .toggle-button:hover {
-  background-color: #34495e;
-}
-.sidebar ul li {
-  display: flex;
-  align-items: center;
-  margin: 10px 0;
+  background: #0056b3;
 }
 
-.sidebar ul li img {
-  width: 20px; /* Adjust size as needed */
-  height: 20px;
-  margin-right: 10px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  .sidebar ul li {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .sidebar ul li img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .toggle-button {
+    font-size: 18px;
+    padding: 8px;
+  }
 }
 
+@media (max-width: 480px) {
+  .sidebar {
+    width: 180px;
+  }
+
+  .sidebar h2 {
+    font-size: 18px;
+  }
+
+  .sidebar ul li {
+    font-size: 13px;
+    padding: 8px;
+  }
+
+  .logout-button {
+    font-size: 14px;
+    padding: 8px;
+  }
+}

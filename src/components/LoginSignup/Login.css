@@ -1,128 +1,206 @@
-/* Container styles */
-.login-signup-container {
+/* Wrapper */
+.loginsignup {
   width: 100%;
-  max-width: 400px;
-  margin: 50px auto;
-  padding: 25px;
-  background: linear-gradient(145deg, #fffbf2, #ffe0b2);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom right, #d0f0ff, #e0f7fa);
+  font-family: 'Arial', sans-serif;
+}
+
+/* Card Container */
+.loginsignup-wrapper {
+  display: flex;
+  width: 85%;
+  max-width: 900px;
+  height: auto;
+  background: white;
   border-radius: 15px;
-  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.2), -8px -8px 16px rgba(255, 255, 255, 0.8);
-  text-align: center;
-  font-family: "Poppins", sans-serif;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
-/* Form heading */
-.login-signup-container h2 {
-  margin-bottom: 25px;
-  color: #ff6f61;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  animation: slideInFromLeft 1.2s ease-out;
-}
-
-/* Input fields */
-.login-signup-container input[type="text"],
-.login-signup-container input[type="email"],
-.login-signup-container input[type="password"] {
-  width: 100%;
-  padding: 14px 16px;
-  margin-bottom: 20px;
-  border: 2px solid #ffd5c2;
-  border-radius: 8px;
-  font-size: 14px;
-  background: #fff7f2;
-  color: #333;
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
-  transition: all 0.3s ease;
-}
-
-.login-signup-container input:focus {
-  border-color: #ff6f61;
-  outline: none;
-  box-shadow: 0 0 8px rgba(255, 111, 97, 0.7);
-}
-
-/* Buttons */
-.login-signup-container button {
-  width: 100%;
-  padding: 14px 20px;
-  background: linear-gradient(145deg, #ff6f61, #ff3b2c);
-  border: none;
-  border-radius: 8px;
+/* Left Section */
+.loginsignup-left {
+  flex: 1;
+  background: linear-gradient(to top right, #007b83, #0097a7);
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.loginsignup-left h2 {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.loginsignup-left p {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.loginsignup-left button {
+  background: white;
+  color: #007b83;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
   font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
+  font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 6px 6px 14px rgba(0, 0, 0, 0.2), -6px -6px 14px rgba(255, 255, 255, 0.8);
+  transition: background 0.3s, color 0.3s;
 }
 
-.login-signup-container button:hover {
-  background: linear-gradient(145deg, #ff3b2c, #ff6f61);
-  transform: scale(1.05);
-  box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.3), -8px -8px 18px rgba(255, 255, 255, 0.9);
+.loginsignup-left button:hover {
+  background: #b2ebf2;
 }
 
-.login-signup-container button:active {
-  transform: scale(0.98);
-  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.2), inset -5px -5px 10px rgba(255, 255, 255, 0.7);
+/* Right Section */
+.loginsignup-right {
+  flex: 1.5;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-/* Links */
-.login-signup-container a {
-  color: #ff3b2c;
+.loginsignup-right h1 {
+  font-size: 30px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.loginsignup-fields {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 350px;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.loginsignup-fields input {
+  height: 45px;
+  padding: 0 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.loginsignup-fields input:focus {
+  border-color: #007b83;
+}
+
+.loginsignup-right button {
+  background: #007b83;
+  color: white;
+  border: none;
+  width: 100%;
+  max-width: 350px;
+  height: 45px;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.loginsignup-right button:hover {
+  background: #005f66;
+}
+
+.loginsignup-right p {
   font-size: 14px;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  color: #666;
+  margin-top: 10px;
 }
 
-.login-signup-container a:hover {
-  color: #ff6f61;
-  text-decoration: underline;
+.loginsignup-right p span {
+  color: #007b83;
+  font-weight: bold;
+  cursor: pointer;
 }
 
-/* Animation effect for heading */
-@keyframes slideInFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-/* Animation effect for form elements */
-.login-signup-container input,
-.login-signup-container button {
-  animation: fadeInBounce 1.2s ease-out;
-}
-
-@keyframes fadeInBounce {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  50% {
-    opacity: 0.7;
-    transform: translateY(-10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile-friendly adjustments */
-@media (max-width: 600px) {
-  .login-signup-container {
-    padding: 15px;
+/* Responsive Design */
+@media (max-width: 768px) {
+  .loginsignup-wrapper {
+    flex-direction: column;
+    width: 90%;
+    max-width: 500px;
+    height: auto;
   }
 
-  button {
+  .loginsignup-left,
+  .loginsignup-right {
+    flex: 1;
+    padding: 30px;
+  }
+
+  .loginsignup-left h2 {
+    font-size: 22px;
+  }
+
+  .loginsignup-right h1 {
+    font-size: 24px;
+  }
+
+  .loginsignup-fields input {
+    height: 40px;
     font-size: 14px;
+  }
+
+  .loginsignup-right button {
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .loginsignup {
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .loginsignup-wrapper {
+    width: 95%;
+  }
+
+  .loginsignup-left {
+    padding: 20px;
+  }
+
+  .loginsignup-right {
+    padding: 20px;
+  }
+
+  .loginsignup-left h2 {
+    font-size: 20px;
+  }
+
+  .loginsignup-left p {
+    font-size: 14px;
+  }
+
+  .loginsignup-right h1 {
+    font-size: 22px;
+  }
+
+  .loginsignup-fields input {
+    height: 38px;
+    font-size: 14px;
+  }
+
+  .loginsignup-right button {
+    height: 38px;
+    font-size: 15px;
   }
 }
