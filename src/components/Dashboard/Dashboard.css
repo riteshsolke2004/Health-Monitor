@@ -1,13 +1,13 @@
-/* Full-Screen Dashboard */
+/* 📌 Full-Screen Dashboard */
 .dashboard {
-  width: 100vw; /* Full screen width */
+  width: 100vw;
   min-height: 100vh;
-  padding: 20px 40px;
-  background-color: #f4f4f9;
-  margin-top: 80px; /* To match header height */
+  padding: 20px;
+  background-color: rgb(237, 167, 114);
+  margin-top: 80px;
 }
 
-/* Dashboard Sections */
+/* 📌 Section Styling */
 .dashboard-section {
   margin-bottom: 40px;
 }
@@ -19,15 +19,16 @@
   text-align: center;
 }
 
-/* Grid Layout */
+/* 📌 Grid Layout */
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
 
-/* Box Styling */
+/* 📌 Box Styling */
 .box {
+  position: relative;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -35,122 +36,126 @@
   text-align: center;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  overflow: hidden; /* Prevents image overflow */
 }
 
+/* 📌 Hover Effects */
 .box:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.box h4 {
-  font-size: 1.4rem;
-  color: #007bff;
-  margin-bottom: 10px;
+/* 📌 Overlay for Text Readability */
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
 }
 
-.box p {
-  font-size: 1.1rem;
-  color: #555;
+/* 📌 Ensuring Text Stays on Top */
+.box h4 {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* 📌 Background Images */
+.heart-rate {
+  background-image: url('heart-rate1.jpg');
+}
+
+.steps {
+  background-image: url('step.jpg');
+}
+
+.disease-predictor {
+  background-image: url('disease.jpg');
+}
+
+.recommendations {
+  background-image: url('recommend.jpg');
+}
+
+.skin-care {
+  background-image: url('skincare.jpg');
+}
+
+.workout {
+  background-image: url('workout.jpg');
+}
+
+.healthy-snacks {
+  background-image: url('snacks.jpg');
+}
+
+.doctor-insights {
+  background-image: url('doctor.jpg');
 }
 
 /* 📌 Responsive Design */
 @media (max-width: 1024px) {
   .dashboard {
-      padding: 20px;
+    padding: 20px;
   }
 }
 
-@media (max-width: 768px) {
-  .dashboard {
-      padding: 15px;
-  }
-
-  .dashboard-section h2 {
-      font-size: 1.5rem;
-  }
-
-  .grid-container {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-
-  .box {
-      padding: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .dashboard {
-      padding: 10px;
-  }
-
-  .dashboard-section h2 {
-      font-size: 1.3rem;
-  }
-
-  .grid-container {
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 10px;
-  }
-
-  .box {
-      padding: 15px;
-  }
-
-  .box h4 {
-      font-size: 1.2rem;
-  }
-
-  .box p {
-      font-size: 1rem;
-  }
-}
-
-.dashboard {
-  padding: 20px;
-  margin-left: 260px;
-}
-
-.dashboard-section {
-  margin-bottom: 30px;
-}
-
-h2 {
-  color: #0d47a1;
-}
-
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.box {
-  background: #e3f2fd;
-  padding: 20px;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out, background 0.3s;
-}
-
-.box:hover {
-  background: #bbdefb;
-  transform: scale(1.05);
-}
-
-/* Responsive */
 @media (max-width: 768px) {
   .dashboard {
     margin-left: 0;
     padding: 10px;
   }
 
+  .dashboard-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .dashboard-section h2 {
+    font-size: 1.3rem;
+  }
+
   .grid-container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
   }
 
   .box {
     padding: 15px;
+    height: 120px;
+  }
+
+  .box h4 {
+    font-size: 1.2rem;
   }
 }
-

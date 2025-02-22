@@ -4,7 +4,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
 import Dashboard from "./components/Dashboard/Dashboard";
 import SkinCare from "./pages/SkinCare";
-import ProtectYourSkin from "./pages/ProtectYourSkin";
+import Workout from "./pages/Workout";
 import HealthySnacks from "./pages/HealthySnacks";
 import DoctorInsights from "./pages/DoctorInsights";
 import Footer from "./components/Footer/Footer";
@@ -16,26 +16,23 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-        {/* Sidebar */}
-        <Sidebar />
+        <Sidebar /> {/* Sidebar appears on all pages */}
 
-        {/* Main Content */}
         <div className="main-content">
-          <Header />
+          <Header /> {/* Header appears on all pages */}
+
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<LoginSignup />} />
             <Route path="/profile" element={<Profile />} />
-            <Route path="/" element={<Dashboard />} />
             <Route path="/skin-care" element={<SkinCare />} />
-            <Route path="/protect-your-skin" element={<ProtectYourSkin />} />
+            <Route path="/workout" element={<Workout />} /> {/* ✅ Fix this */}
             <Route path="/healthy-snacks" element={<HealthySnacks />} />
             <Route path="/doctor-insights" element={<DoctorInsights />} />
           </Routes>
         </div>
       </div>
-      <Footer/>
-
+      <Footer />
     </Router>
   );
 };

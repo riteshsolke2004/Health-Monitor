@@ -5,28 +5,31 @@ import "./Dashboard.css";
 const Dashboard = () => {
   const navigate = useNavigate();
 
+  const overviewData = [
+    { name: "Heart Rate", className: "heart-rate" },
+    { name: "Steps", className: "steps" },
+    { name: "Disease Predictor", className: "disease-predictor" },
+    { name: "Recommendations", className: "recommendations" },
+  ];
+
+  const healthEducationData = [
+    { name: "Skin Care", className: "skin-care", path: "/skin-care" },
+    { name: "Work-out", className: "workout", path: "/Work-out" },
+    { name: "Healthy Snacks", className: "healthy-snacks", path: "/healthy-snacks" },
+    { name: "Doctor Insights", className: "doctor-insights", path: "/doctor-insights" },
+  ];
+
   return (
     <div className="dashboard">
       {/* Overview Section */}
       <div className="dashboard-section">
         <h2>Overview</h2>
         <div className="grid-container">
-          <div className="box">
-            <h4>Heart Rate</h4>
-            <p>80 bpm</p>
-          </div>
-          <div className="box">
-            <h4>Steps</h4>
-            <p>10,000</p>
-          </div>
-          <div className="box">
-            <h4>Disease Predictor</h4>
-            <p>No issues detected</p>
-          </div>
-          <div className="box">
-            <h4>Recommendations</h4>
-            <p>Stay Hydrated</p>
-          </div>
+          {overviewData.map((item, index) => (
+            <div key={index} className={`box ${item.className}`}>
+              <h4>{item.name}</h4>
+            </div>
+          ))}
         </div>
       </div>
 
@@ -34,22 +37,15 @@ const Dashboard = () => {
       <div className="dashboard-section">
         <h2>Health Education</h2>
         <div className="grid-container">
-          <div className="box" onClick={() => navigate("/skin-care")}>
-            <h4>Skin Care 101</h4>
-            <p>Learn the basics of keeping your skin healthy.</p>
-          </div>
-          <div className="box" onClick={() => navigate("/protect-your-skin")}>
-            <h4>Protect Your Skin</h4>
-            <p>Tips to protect your skin from harmful UV rays.</p>
-          </div>
-          <div className="box" onClick={() => navigate("/healthy-snacks")}>
-            <h4>Healthy Snacks</h4>
-            <p>Discover nutritious and tasty snack options.</p>
-          </div>
-          <div className="box" onClick={() => navigate("/doctor-insights")}>
-            <h4>Doctor Insights</h4>
-            <p>Expert advice for maintaining a healthy lifestyle.</p>
-          </div>
+          {healthEducationData.map((item, index) => (
+            <div
+              key={index}
+              className={`box ${item.className}`}
+              onClick={() => navigate(item.path)}
+            >
+              <h4>{item.name}</h4>
+            </div>
+          ))}
         </div>
       </div>
     </div>
