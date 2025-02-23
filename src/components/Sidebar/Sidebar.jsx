@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { Link } from "react-router-dom"; // Import Link for navigation
 import "./Sidebar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { RiLogoutBoxRLine } from "react-icons/ri";
@@ -43,30 +44,42 @@ const Sidebar = ({ setSidebarOpen }) => {
         <h2>Dashboard</h2>
         <ul>
           <li>
-            <img src="Interactive.png" alt="Interactive" />
-            Interactive
+            <Link to="/interactive">
+              <img src="Interactive.png" alt="Interactive" />
+              Interactive
+            </Link>
           </li>
           <li>
-            <img src="Activity.png" alt="Activity" />
-            Activity
+            <Link to="/activity">
+              <img src="Activity.png" alt="Activity" />
+              Activity
+            </Link>
           </li>
           <li>
-            <img src="Health.png" alt="Health" />
-            Health
+            <Link to="/health">
+              <img src="Health.png" alt="Health" />
+              Health
+            </Link>
           </li>
         </ul>
         <ul>
           <li>
-            <img src="New record.png" alt="New Record" />
-            New Record
+            <Link to="/new-record">
+              <img src="New record.png" alt="New Record" />
+              New Record
+            </Link>
           </li>
           <li>
-            <img src="Recommendation.png" alt="Recommendations" />
-            Recommendations
+            <Link to="/recommendation">
+              <img src="Recommendation.png" alt="Recommendations" />
+              Recommendations
+            </Link>
           </li>
           <li>
-            <img src="chatbot1.png" alt="Chatbot" />
-            Chatbot
+            <Link to="/chatbot">
+              <img src="chatbot1.png" alt="Chatbot" />
+              Chatbot
+            </Link>
           </li>
         </ul>
         <button className="logout-button">

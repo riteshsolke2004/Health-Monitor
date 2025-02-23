@@ -1,8 +1,8 @@
 /* Full-Screen Header */
 .header {
   width: 100vw; /* Full-screen width */
-  height: 80px; /* Adjusted for better visibility */
-  background-color: rgb(101, 166, 153);
+  height: 60px; /* Adjusted for better visibility */
+  background: linear-gradient(135deg, #d0bc27, #7dbdde);
   color: white;
   display: flex;
   justify-content: space-between;
