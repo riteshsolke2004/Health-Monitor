@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
@@ -13,12 +13,14 @@ import LoginSignup from "./components/LoginSignup/Login";
 import "./App.css";
 
 const App = () => {
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
   return (
     <Router>
       <div className="app-container">
-        <Sidebar /> {/* Sidebar appears on all pages */}
+        <Sidebar setSidebarOpen={setSidebarOpen} /> {/* Sidebar appears on all pages */}
 
-        <div className="main-content">
+        <div className={`main-content ${isSidebarOpen ? "shifted" : ""}`}>
           <Header /> {/* Header appears on all pages */}
 
           <Routes>
@@ -26,7 +28,7 @@ const App = () => {
             <Route path="/login" element={<LoginSignup />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/skin-care" element={<SkinCare />} />
-            <Route path="/workout" element={<Workout />} /> {/* ✅ Fix this */}
+            <Route path="/workout" element={<Workout />} />
             <Route path="/healthy-snacks" element={<HealthySnacks />} />
             <Route path="/doctor-insights" element={<DoctorInsights />} />
           </Routes>
