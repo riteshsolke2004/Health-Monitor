@@ -1,8 +1,11 @@
 /* Full-Screen Header */
 .header {
   width: 100vw; /* Full-screen width */
-  height: 60px; /* Adjusted for better visibility */
-  background: linear-gradient(135deg, #d0bc27, #7dbdde);
+  height: 80px; /* Adjusted for better visibility */
+  background: linear-gradient(to right, #56ab2f, #a8e063);
+
+
+
   color: white;
   display: flex;
   justify-content: space-between;
@@ -19,6 +22,8 @@
 .logo {
   font-size: 28px;
   font-weight: bold;
+  color: black;
+  margin-left: 40px;
 }
 
 /* Header Actions */

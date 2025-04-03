@@ -23,7 +23,7 @@ const SkinCare = () => {
           </TorusKnot>
         </Canvas>
         <motion.h1 initial="hidden" animate="visible" variants={fadeInUp}>
-          Skin Care 101 🌿
+          Skin Care 🌿
         </motion.h1>
         <motion.p initial="hidden" animate="visible" variants={fadeInUp}>
           Your ultimate guide to healthy and glowing skin

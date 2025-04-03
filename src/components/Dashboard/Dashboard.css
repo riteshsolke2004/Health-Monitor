@@ -3,7 +3,11 @@
   width: 100vw;
   min-height: 100vh;
   padding: 20px;
-  background-color: rgb(237, 167, 114);
+  background: linear-gradient(to right, #ffffff, #43cea2);
+
+
+
+
   margin-top: 80px;
 }
 
