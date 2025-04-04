@@ -16,6 +16,7 @@ import Chatbot from "./pages/Chatbot";
 import Activity from "./pages/Activity";
 import NewRecord from "./pages/NewRecord";
 import Recommendation from "./pages/Recommendation";
+import DiseasePredictor from "./pages/DiseasePredictor";
 import "./App.css";
 
 const App = () => {
@@ -37,7 +38,7 @@ const App = () => {
 
             {/* Health & Wellness Routes */}
             <Route path="/skin-care" element={<SkinCare />} />
-            <Route path="/workout" element={<Workout />} />
+            <Route path="/work-out" element={<Workout />} />
             <Route path="/healthy-snacks" element={<HealthySnacks />} />
             <Route path="/doctor-insights" element={<DoctorInsights />} />
 
@@ -48,10 +49,11 @@ const App = () => {
             <Route path="/activity" element={<Activity />} />
             <Route path="/new-record" element={<NewRecord />} />
             <Route path="/recommendation" element={<Recommendation />} />
+            <Route path="/disease" element={<DiseasePredictor/>} />
           </Routes>
         </div>
       </div>
-      {/* <Footer /> */}
+      { <Footer /> }
     </Router>
   );
 };
