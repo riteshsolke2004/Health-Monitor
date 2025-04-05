@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
-import Dashboard from "./components/Dashboard/Dashboard";
+import Dashboard from "./pages/Dashboard/Dashboard";
 import SkinCare from "./pages/SkinCare";
 import Workout from "./pages/Workout";
 import HealthySnacks from "./pages/HealthySnacks";
@@ -16,7 +16,8 @@ import Chatbot from "./pages/Chatbot";
 import Activity from "./pages/Activity";
 import NewRecord from "./pages/NewRecord";
 import Recommendation from "./pages/Recommendation";
-import DiseasePredictor from "./pages/DiseasePredictor";
+import DiseasePredictor from "./pages/Dashboard/DiseasePredictor";
+import UserProfile from "./components/UserProfile/UserProfile";
 import "./App.css";
 
 const App = () => {
@@ -49,7 +50,13 @@ const App = () => {
             <Route path="/activity" element={<Activity />} />
             <Route path="/new-record" element={<NewRecord />} />
             <Route path="/recommendation" element={<Recommendation />} />
-            <Route path="/disease" element={<DiseasePredictor/>} />
+
+            {/* ...existing routes */}
+
+            <Route path="/disease" element={<DiseasePredictor />} />
+            <Route path="/user" element={<UserProfile/>}/>
+    
+
           </Routes>
         </div>
       </div>

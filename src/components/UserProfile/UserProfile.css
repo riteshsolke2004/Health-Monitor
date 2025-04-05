@@ -1,0 +1,298 @@
+/* HealthProfile.css */
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --accent-color: #e74c3c;
+  --text-color: #2c3e50;
+  --light-text: #7f8c8d;
+  --background-color: #f8f9fa;
+  --card-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --gradient-start: #3498db;
+  --gradient-end: #2980b9;
+}
+
+.health-profile-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 40px;
+}
+
+.health-profile-header {
+  position: relative;
+}
+
+.profile-banner {
+  background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));
+  color: white;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+}
+
+.profile-banner h1 {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.profile-user-info {
+  display: flex;
+  padding: 24px;
+  background-color: var(--card-bg);
+  position: relative;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-right: 24px;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-details {
+  flex: 1;
+}
+
+.profile-details h2 {
+  margin: 0 0 4px 0;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profile-subtitle {
+  color: var(--light-text);
+  margin: 0 0 12px 0;
+  font-size: 14px;
+}
+
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 12px;
+  column-gap: 24px;
+  row-gap: 8px;
+  font-size: 14px;
+}
+
+.contact-details p {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  color: var(--light-text);
+}
+
+.contact-details p svg {
+  margin-right: 6px;
+  color: var(--primary-color);
+}
+
+.health-dashboard {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.health-card {
+  background-color: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.health-card h3 {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 12px;
+}
+
+.health-card h3 svg {
+  margin-right: 8px;
+  color: var(--primary-color);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+}
+
+.metric {
+  background-color: rgba(52, 152, 219, 0.1);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 4px;
+  padding: 12px;
+}
+
+.metric-name {
+  font-size: 12px;
+  margin: 0 0 4px 0;
+  color: var(--light-text);
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.vitals-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vitals-table th, .vitals-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.vitals-table th {
+  font-weight: 500;
+  color: var(--light-text);
+  font-size: 14px;
+}
+
+.goals-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.goal-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.goal-info h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.goal-info p {
+  margin: 4px 0 0 0;
+  font-size: 14px;
+  color: var(--light-text);
+}
+
+.goal-progress {
+  margin-top: 4px;
+}
+
+.progress-bar {
+  height: 8px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-filled {
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+
+.health-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.info-section {
+  margin-bottom: 16px;
+}
+
+.info-section h4 {
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  font-weight: 500;
+}
+
+.info-section ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.info-section li {
+  margin-bottom: 4px;
+}
+
+.appointments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.appointment-item {
+  padding: 12px;
+  border-left: 3px solid var(--primary-color);
+  background-color: rgba(52, 152, 219, 0.05);
+  border-radius: 4px;
+}
+
+.appointment-type {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.appointment-doctor {
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.appointment-datetime {
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--light-text);
+  display: flex;
+  align-items: center;
+}
+
+.appointment-datetime svg {
+  margin-right: 4px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .health-cards-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .profile-user-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 16px;
+  }
+  
+  .contact-details {
+    justify-content: center;
+  }
+}

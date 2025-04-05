@@ -1,0 +1,165 @@
+/* 📌 Full-Screen Dashboard */
+.dashboard {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 20px;
+  background: linear-gradient(to right, #ffffff, #43cea2);
+
+
+
+
+  margin-top: 20px;
+}
+
+/* 📌 Section Styling */
+.dashboard-section {
+  margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+/* 📌 Grid Layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* 📌 Box Styling */
+.box {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  overflow: hidden; /* Prevents image overflow */
+}
+
+/* 📌 Hover Effects */
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* 📌 Overlay for Text Readability */
+.box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* 📌 Ensuring Text Stays on Top */
+.box h4 {
+  position: relative;
+  z-index: 2;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* 📌 Background Images */
+.heart-rate {
+  background-image: url('heart-rate1.jpg');
+}
+
+.steps {
+  background-image: url('step.jpg');
+}
+
+.disease-predictor {
+  background-image: url('disease.jpg');
+}
+
+.recommendations {
+  background-image: url('recommend.jpg');
+}
+
+.skin-care {
+  background-image: url('skincare.jpg');
+}
+
+.workout {
+  background-image: url('workout.jpg');
+}
+
+.healthy-snacks {
+  background-image: url('snacks.jpg');
+}
+
+.doctor-insights {
+  background-image: url('doctor.jpg');
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 1024px) {
+  .dashboard {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .dashboard-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .box {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .dashboard {
+    padding: 10px;
+  }
+
+  .dashboard-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .grid-container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+  }
+
+  .box {
+    padding: 15px;
+    height: 120px;
+  }
+
+  .box h4 {
+    font-size: 1.2rem;
+  }
+}
