@@ -8,7 +8,7 @@ import "./Chatbot.css";
 
 const Chatbot = () => {
   // Replace this with your actual Google Gemini API Key
-  const API_KEY = "AIzaSyA29W9bIDs5UbOSZFIs3-Qeo2WWsYLPmoo";  
+  const API_KEY = "AIzaSyCMXSeTBcHZOQ9NhJ033PatOEynyaiJD-E";  
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${API_KEY}`;
 
   const [messages, setMessages] = useState([

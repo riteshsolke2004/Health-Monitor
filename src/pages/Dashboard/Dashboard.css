@@ -88,7 +88,7 @@
 
 .steps {
   background-image: url('map.jpg');
-  
+
 }
 
 .disease-predictor {
@@ -126,10 +126,12 @@
   .dashboard {
     margin-left: 0;
     padding: 10px;
+    
   }
 
   .dashboard-section h2 {
     font-size: 1.5rem;
+    
   }
 
   .grid-container {

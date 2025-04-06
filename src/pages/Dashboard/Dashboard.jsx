@@ -8,7 +8,7 @@ const Dashboard = () => {
 
   const overviewData = [
     { name: "Fitness-Tracker", className: "heart-rate", path: "/heart-rate" },
-    { name: "Google-Map", className: "steps", path: "/steps" },
+    { name: "Google-Map", className: "steps", path: "/map" },
     { name: "Disease Predictor", className: "disease-predictor", path: "/disease" },
     { name: "Recommendations", className: "recommendations", path: "/recommendations" },
   ];

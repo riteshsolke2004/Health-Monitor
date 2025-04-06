@@ -3,8 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+
 import Dashboard from "./pages/Dashboard/Dashboard";
 import SkinCare from "./pages/SkinCare";
 import Workout from "./pages/Workout";
@@ -12,7 +15,6 @@ import HealthySnacks from "./pages/HealthySnacks";
 import DoctorInsights from "./pages/DoctorInsights";
 import Profile from "./components/Profile/Profile";
 import LoginSignup from "./components/LoginSignup/Login";
-import Footer from "./components/Footer/Footer";
 import Interactive from "./pages/Interactive";
 import Health from "./pages/Health";
 import Chatbot from "./pages/Chatbot";
@@ -23,57 +25,49 @@ import DiseasePredictor from "./pages/Dashboard/DiseasePredictor";
 import UserProfile from "./components/UserProfile/UserProfile";
 import Recommendations from "./pages/Recommendations";
 import FitnessTracker from "./pages/FitnessTracker";
+import MapPage from "./pages/Dashboard/MapPage";
 
-
+import routes from "./routes/routes";
 import "./App.css";
 
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    
     <Router>
       <div className="app-container">
-        <Sidebar setSidebarOpen={setSidebarOpen} /> {/* Sidebar on all pages */}
+        <Sidebar setSidebarOpen={setSidebarOpen} />
 
         <div className={`main-content ${isSidebarOpen ? "shifted" : ""}`}>
-          <Header /> {/* Header on all pages */}
-          
+          <Header />
 
           <Routes>
-            {/* Dashboard & User Routes */}
-            <Route path="/" element={<Dashboard />} />
-            <Route path="/login" element={<LoginSignup />} />
-            <Route path="/profile" element={<Profile />} />
+            <Route path={routes.dashboard} element={<Dashboard />} />
+            <Route path={routes.login} element={<LoginSignup />} />
+            <Route path={routes.profile} element={<Profile />} />
 
-            {/* Health & Wellness Routes */}
-            <Route path="/skin-care" element={<SkinCare />} />
-            <Route path="/work-out" element={<Workout />} />
-            <Route path="/healthy-snacks" element={<HealthySnacks />} />
-            <Route path="/doctor-insights" element={<DoctorInsights />} />
+            <Route path={routes.skinCare} element={<SkinCare />} />
+            <Route path={routes.workout} element={<Workout />} />
+            <Route path={routes.healthySnacks} element={<HealthySnacks />} />
+            <Route path={routes.doctorInsights} element={<DoctorInsights />} />
 
-            {/* Sidebar Pages */}
-            <Route path="/interactive" element={<Interactive />} />
-            <Route path="/health" element={<Health />} />
-            <Route path="/chatbot" element={<Chatbot />} />
-            <Route path="/activity" element={<Activity />} />
-            <Route path="/new-record" element={<NewRecord />} />
-            <Route path="/recommendation" element={<Recommendation />} />
+            <Route path={routes.interactive} element={<Interactive />} />
+            <Route path={routes.health} element={<Health />} />
+            <Route path={routes.chatbot} element={<Chatbot />} />
+            <Route path={routes.activity} element={<Activity />} />
+            <Route path={routes.newRecord} element={<NewRecord />} />
+            <Route path={routes.recommendation} element={<Recommendation />} />
 
-            {/* ...existing routes */}
+            <Route path={routes.diseasePredictor} element={<DiseasePredictor />} />
+            <Route path={routes.userProfile} element={<UserProfile />} />
 
-            <Route path="/disease" element={<DiseasePredictor />} />
-            <Route path="/user" element={<UserProfile/>}/>
-
-            <Route path="/recommendations" element={<Recommendations />} />
-            <Route path="/heart-rate" element={<FitnessTracker />} />
-
-    
-
+            <Route path={routes.recommendations} element={<Recommendations />} />
+            <Route path={routes.heartRate} element={<FitnessTracker />} />
+            <Route path={routes.map} element={<MapPage />} />
           </Routes>
         </div>
       </div>
-      { <Footer /> }
+      <Footer />
     </Router>
   );
 };

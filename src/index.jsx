@@ -7,6 +7,7 @@ import "leaflet-defaulticon-compatibility";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 
 
+
 // Create a root element and render the app
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
