@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "leaflet/dist/leaflet.css";
+import "leaflet-defaulticon-compatibility";
+import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Header from "./components/Header/Header";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -18,18 +21,24 @@ import NewRecord from "./pages/NewRecord";
 import Recommendation from "./pages/Recommendation";
 import DiseasePredictor from "./pages/Dashboard/DiseasePredictor";
 import UserProfile from "./components/UserProfile/UserProfile";
+import Recommendations from "./pages/Recommendations";
+import FitnessTracker from "./pages/FitnessTracker";
+
+
 import "./App.css";
 
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   return (
+    
     <Router>
       <div className="app-container">
         <Sidebar setSidebarOpen={setSidebarOpen} /> {/* Sidebar on all pages */}
 
         <div className={`main-content ${isSidebarOpen ? "shifted" : ""}`}>
           <Header /> {/* Header on all pages */}
+          
 
           <Routes>
             {/* Dashboard & User Routes */}
@@ -55,6 +64,10 @@ const App = () => {
 
             <Route path="/disease" element={<DiseasePredictor />} />
             <Route path="/user" element={<UserProfile/>}/>
+
+            <Route path="/recommendations" element={<Recommendations />} />
+            <Route path="/heart-rate" element={<FitnessTracker />} />
+
     
 
           </Routes>

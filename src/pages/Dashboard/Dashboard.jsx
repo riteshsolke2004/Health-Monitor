@@ -7,8 +7,8 @@ const Dashboard = () => {
   const navigate = useNavigate();
 
   const overviewData = [
-    { name: "Heart Rate", className: "heart-rate", path: "/heart-rate" },
-    { name: "Steps", className: "steps", path: "/steps" },
+    { name: "Fitness-Tracker", className: "heart-rate", path: "/heart-rate" },
+    { name: "Google-Map", className: "steps", path: "/steps" },
     { name: "Disease Predictor", className: "disease-predictor", path: "/disease" },
     { name: "Recommendations", className: "recommendations", path: "/recommendations" },
   ];
@@ -27,13 +27,12 @@ const Dashboard = () => {
         <h2>Overview</h2>
         <div className="grid-container">
           {overviewData.map((item, index) => (
-          
-            <div key={index} className={`box ${item.className}`}>
-              <h4>{item.name}</h4>
-            </div>
-            
-          ))}
-        </div>
+          <Link key={index} to={item.path} className={`box ${item.className}`}>
+          <h4>{item.name}</h4>
+          </Link>
+  ))}
+</div>
+
       </div>
 
       {/* Health Education Section */}

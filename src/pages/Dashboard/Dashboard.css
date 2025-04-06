@@ -3,7 +3,7 @@
   width: 100vw;
   min-height: 100vh;
   padding: 20px;
-  background: linear-gradient(to right, #ffffff, #43cea2);
+  background: linear-gradient(to right, #b9e6d7, #b9e6d7);
 
 
 
@@ -87,7 +87,8 @@
 }
 
 .steps {
-  background-image: url('step.jpg');
+  background-image: url('map.jpg');
+  
 }
 
 .disease-predictor {
