@@ -1,3 +1,5 @@
+import ConsultationPage from "../pages/Consultation";
+
 const routes = {
     // Dashboard & Core
     dashboard: "/",
@@ -15,6 +17,7 @@ const routes = {
     workout: "/work-out",
     healthySnacks: "/healthy-snacks",
     doctorInsights: "/doctor-insights",
+    Consultation:"/consultation",
   
     // Sidebar & Extra Pages
     interactive: "/interactive",

@@ -29,6 +29,7 @@ import MapPage from "./pages/Dashboard/MapPage";
 
 import routes from "./routes/routes";
 import "./App.css";
+import ConsultationPage from "./pages/Consultation";
 
 const App = () => {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -50,6 +51,7 @@ const App = () => {
             <Route path={routes.workout} element={<Workout />} />
             <Route path={routes.healthySnacks} element={<HealthySnacks />} />
             <Route path={routes.doctorInsights} element={<DoctorInsights />} />
+            <Route path={routes.Consultation} element={<ConsultationPage/>}/>
 
             <Route path={routes.interactive} element={<Interactive />} />
             <Route path={routes.health} element={<Health />} />

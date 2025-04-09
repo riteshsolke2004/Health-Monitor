@@ -17,7 +17,9 @@ const Header = () => {
 
   return (
     <div className="header">
+      <Link to="/">
       <h2 className="logo">Disease Prediction</h2>
+      </Link>
       <div className="header-actions">
         <input type="text" placeholder="Search..." />
         <span className="icon">🔔</span>
