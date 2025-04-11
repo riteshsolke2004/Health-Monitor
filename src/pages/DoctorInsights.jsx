@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Sphere, MeshDistortMaterial } from "@react-three/drei";
+import { useNavigate } from "react-router-dom";
 import "./DoctorInsights.css";
-
 
 const FeatureCard = ({ icon, title, description, delay }) => {
   return (
@@ -49,6 +49,7 @@ const TestimonialCard = ({ name, role, text, image, index }) => {
 };
 
 const DoctorInsights = () => {
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState("insights");
   
   const testimonials = [
@@ -76,12 +77,15 @@ const DoctorInsights = () => {
       text: "The mental wellness techniques helped me manage classroom stress and be more present for my students.",
       image: ""
     }
-    
   ];
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
+  };
+
+  const handleBookConsultation = () => {
+    navigate("/consultation");
   };
 
   return (
@@ -110,7 +114,7 @@ const DoctorInsights = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <button className="primary-button">Get Started</button>
+            <button className="primary-button" onClick={handleBookConsultation}>Get Started</button>
             <button className="secondary-button">Learn More</button>
           </motion.div>
         </div>
@@ -241,30 +245,30 @@ const DoctorInsights = () => {
           <div className="doctors-grid">
             <div className="doctor-card">
               <div className="doctor-image">
-                <img src="https://t4.ftcdn.net/jpg/01/36/18/77/360_F_136187711_qeBMOwkPdTg1dCN8e5TR1AmduXDz60Xn.jpg" alt="Dr. James Wilson" />
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4LILwpGjBEiPCRnKN7evXPNxA7N4hlVi8FQ&s" alt="Dr. James Wilson" />
               </div>
               <h3>Dr. James Wilson</h3>
               <p className="specialty">Cardiology</p>
               <p>Specializing in preventive heart care and lifestyle modifications for optimal cardiovascular health.</p>
-              <button className="book-button">Book Appointment</button>
+              <button className="book-button" onClick={handleBookConsultation}>Book Appointment</button>
             </div>
             <div className="doctor-card">
               <div className="doctor-image">
-                <img src="https://www.shutterstock.com/image-photo/head-shot-woman-wearing-white-600nw-1529466836.jpg" alt="Dr. Maria Garcia" />
+                <img src="https://thinkeurope.de/common/uploads/blog/poland65f03870530fb.jpg" alt="Dr. Maria Garcia" />
               </div>
               <h3>Dr. Maria Garcia</h3>
               <p className="specialty">Nutrition Science</p>
               <p>Expert in dietary interventions for chronic conditions and personalized nutrition plans.</p>
-              <button className="book-button">Book Appointment</button>
+              <button className="book-button" onClick={handleBookConsultation}>Book Appointment</button>
             </div>
             <div className="doctor-card">
               <div className="doctor-image">
-                <img src="https://www.shutterstock.com/image-photo/portrait-happy-friendly-male-indian-260nw-2033522228.jpg" alt="Dr. Ahmed Hassan" />
+                <img src="https://market-resized.envatousercontent.com/photodune.net/EVA/TRX/49/c7/19/fa/3f/v1_E10/E109CIML.jpg?auto=format&q=94&mark=https%3A%2F%2Fassets.market-storefront.envato-static.com%2Fwatermarks%2Fphoto-260724.png&opacity=0.2&cf_fit=contain&w=590&h=393&s=ec3eb84972a054809a3a7240ae3d56271d5efc78f7035565e96625ff2fc5f92c" alt="Dr. Ahmed Hassan" />
               </div>
               <h3>Dr. Ahmed Hassan</h3>
               <p className="specialty">Sleep Medicine</p>
               <p>Specialized in sleep disorders and integration of sleep optimization with overall health.</p>
-              <button className="book-button">Book Appointment</button>
+              <button className="book-button" onClick={handleBookConsultation}>Book Appointment</button>
             </div>
           </div>
         </motion.section>
@@ -290,12 +294,13 @@ const DoctorInsights = () => {
             whileHover={{ scale: 1.05 }} 
             whileTap={{ scale: 0.95 }} 
             className="cta-button"
+            onClick={handleBookConsultation}
           >
             Book Your Consultation
           </motion.button>
         </div>
         <div className="cta-image">
-          <img src="https://media.istockphoto.com/id/1346124900/photo/confident-successful-mature-doctor-at-hospital.jpg?s=612x612&w=0&k=20&c=S93n5iTDVG3_kJ9euNNUKVl9pgXTOdVQcI_oDGG-QlE=" alt="Doctor consultation" />
+          <img src="https://foreignopd.com/img/2ndopinion/doctor.jpg" alt="Doctor consultation" />
         </div>
       </motion.section>
 

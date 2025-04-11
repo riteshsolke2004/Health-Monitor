@@ -340,6 +340,7 @@
 .cta-content {
   flex: 2;
   padding-right: 2rem;
+
 }
 
 .cta-image {
@@ -383,7 +384,7 @@
 
 .cta-button {
   background: linear-gradient(135deg, #4FA8FF, #2D5CFE);
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   padding: 15px 30px;
   border-radius: 50px;
