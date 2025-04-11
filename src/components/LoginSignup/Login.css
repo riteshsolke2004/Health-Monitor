@@ -1,206 +1,142 @@
-/* Wrapper */
-.loginsignup {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(to bottom right, #d0f0ff, #e0f7fa);
-  font-family: 'Arial', sans-serif;
+/* Login.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
 
-/* Card Container */
-.loginsignup-wrapper {
+.login-container {
   display: flex;
-  width: 85%;
-  max-width: 900px;
-  height: auto;
-  background: white;
-  border-radius: 15px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #4b6cb7, #182848);
+  padding: 20px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
   overflow: hidden;
 }
 
-/* Left Section */
-.loginsignup-left {
-  flex: 1;
-  background: linear-gradient(to top right, #007b83, #0097a7);
+.login-header {
+  background: linear-gradient(135deg, #5e35b1, #3949ab);
   color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 40px 20px;
+  padding: 30px 25px;
   text-align: center;
+  position: relative;
 }
 
-.loginsignup-left h2 {
-  font-size: 26px;
-  margin-bottom: 10px;
+.login-header h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+  font-weight: 600;
 }
 
-.loginsignup-left p {
-  font-size: 15px;
-  margin-bottom: 20px;
+.login-header p {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 15px;
 }
 
-.loginsignup-left button {
-  background: white;
-  color: #007b83;
+.toggle-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
   border: none;
-  padding: 12px 25px;
-  border-radius: 25px;
-  font-size: 16px;
-  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 20px;
   cursor: pointer;
-  transition: background 0.3s, color 0.3s;
+  font-size: 12px;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.loginsignup-left button:hover {
-  background: #b2ebf2;
+.toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Right Section */
-.loginsignup-right {
-  flex: 1.5;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.login-form {
+  padding: 30px 25px;
+}
+
+.login-form h3 {
+  margin-bottom: 25px;
+  font-size: 22px;
+  color: #333;
   text-align: center;
 }
 
-.loginsignup-right h1 {
-  font-size: 30px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.loginsignup-fields {
-  display: flex;
-  flex-direction: column;
+.login-form input {
   width: 100%;
-  max-width: 350px;
-  gap: 15px;
-  margin-bottom: 20px;
-}
-
-.loginsignup-fields input {
-  height: 45px;
-  padding: 0 15px;
+  padding: 14px 16px;
+  margin-bottom: 18px;
   border: 1px solid #ddd;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px;
+  transition: border-color 0.3s;
   outline: none;
-  transition: border-color 0.3s ease;
 }
 
-.loginsignup-fields input:focus {
-  border-color: #007b83;
+.login-form input:focus {
+  border-color: #5e35b1;
+  box-shadow: 0 0 0 2px rgba(94, 53, 177, 0.1);
 }
 
-.loginsignup-right button {
-  background: #007b83;
-  color: white;
-  border: none;
+.submit-btn {
   width: 100%;
-  max-width: 350px;
-  height: 45px;
+  padding: 14px;
+  border: none;
   border-radius: 8px;
-  font-size: 18px;
-  font-weight: bold;
+  background: linear-gradient(135deg, #5e35b1, #3949ab);
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: all 0.3s ease;
+  margin-top: 5px;
 }
 
-.loginsignup-right button:hover {
-  background: #005f66;
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 73, 171, 0.4);
 }
 
-.loginsignup-right p {
+.alternative-option {
+  text-align: center;
+  margin-top: 20px;
   font-size: 14px;
   color: #666;
-  margin-top: 10px;
 }
 
-.loginsignup-right p span {
-  color: #007b83;
-  font-weight: bold;
+.alternative-option span {
+  color: #5e35b1;
   cursor: pointer;
+  font-weight: 500;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .loginsignup-wrapper {
-    flex-direction: column;
-    width: 90%;
-    max-width: 500px;
-    height: auto;
-  }
-
-  .loginsignup-left,
-  .loginsignup-right {
-    flex: 1;
-    padding: 30px;
-  }
-
-  .loginsignup-left h2 {
-    font-size: 22px;
-  }
-
-  .loginsignup-right h1 {
-    font-size: 24px;
-  }
-
-  .loginsignup-fields input {
-    height: 40px;
-    font-size: 14px;
-  }
-
-  .loginsignup-right button {
-    height: 40px;
-    font-size: 16px;
-  }
+.alternative-option span:hover {
+  text-decoration: underline;
 }
 
+/* Responsive adjustments */
 @media (max-width: 480px) {
-  .loginsignup {
-    height: auto;
-    padding: 20px 0;
+  .login-card {
+    box-shadow: none;
   }
-
-  .loginsignup-wrapper {
-    width: 95%;
+  
+  .login-header {
+    padding: 25px 20px;
   }
-
-  .loginsignup-left {
-    padding: 20px;
-  }
-
-  .loginsignup-right {
-    padding: 20px;
-  }
-
-  .loginsignup-left h2 {
-    font-size: 20px;
-  }
-
-  .loginsignup-left p {
-    font-size: 14px;
-  }
-
-  .loginsignup-right h1 {
-    font-size: 22px;
-  }
-
-  .loginsignup-fields input {
-    height: 38px;
-    font-size: 14px;
-  }
-
-  .loginsignup-right button {
-    height: 38px;
-    font-size: 15px;
+  
+  .login-form {
+    padding: 25px 20px;
   }
 }

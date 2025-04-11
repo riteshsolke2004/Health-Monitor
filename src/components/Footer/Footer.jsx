@@ -1,58 +1,76 @@
 import React from 'react';
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
     <footer className="footer">
-      <div className="footer-content">
-        {/* Logo and Brief Information */}
-        <div className="footer-section logo-section">
-          <img src="world.png" alt="WHO Logo" className="logo" />
-          <p className="footer-description">
-            The Disease Prediction App provides innovative solutions to health challenges through data-driven insights and predictions. Trusted by healthcare professionals globally.
-          </p>
+      <div className="footer-container">
+        <div className="footer-main">
+          {/* Brand Section */}
+          <div className="footer-brand">
+            <img src="world.png" alt="Health App Logo" className="footer-logo" />
+            <p>Providing innovative healthcare solutions through data-driven insights and personalized recommendations.</p>
+            <div className="social-icons">
+              <a href="https://facebook.com" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-twitter"></i>
+              </a>
+              <a href="https://instagram.com" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-instagram"></i>
+              </a>
+              <a href="https://linkedin.com" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i className="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><Link to="/doctor-insights">Health Insights</Link></li>
+              <li><Link to="/consultation">Book Consultation</Link></li>
+              <li><Link to="/about">About Us</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Support */}
+          <div className="footer-links">
+            <h4>Support</h4>
+            <ul>
+              <li><Link to="/faq">FAQs</Link></li>
+              <li><Link to="/privacy">Privacy Policy</Link></li>
+              <li><Link to="/terms">Terms of Service</Link></li>
+              <li><Link to="/help">Help Center</Link></li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div className="footer-newsletter">
+            <h4>Stay Updated</h4>
+            <p>Subscribe to our newsletter for health tips and updates.</p>
+            <div className="newsletter-form">
+              <input type="email" placeholder="Your email" />
+              <button type="submit">
+                <i className="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Important Links */}
-        <div className="footer-section links-section">
-          <h4>Important Links</h4>
-          <ul>
-            <li><a href="/about-us">About Us</a></li>
-            <li><a href="/contact">Contact</a></li>
-            <li><a href="/privacy-policy">Privacy Policy</a></li>
-            <li><a href="/terms">Terms & Conditions</a></li>
-            <li><a href="/faq">FAQ</a></li>
-          </ul>
+        {/* Footer Bottom */}
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Health Prediction App. All rights reserved.</p>
+          <div className="trust-badges">
+            <span>HIPAA Compliant</span>
+            <span>Data Protected</span>
+            <span>Medically Reviewed</span>
+          </div>
         </div>
-
-        {/* Social Media */}
-        <div className="footer-section social-media">
-          <h4>Follow Us</h4>
-          <ul>
-            <li><a href="https://www.facebook.com/WHO" target="_blank" rel="noopener noreferrer">Facebook</a></li>
-            <li><a href="https://twitter.com/WHO" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-            <li><a href="https://www.linkedin.com/company/world-health-organization" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-            <li><a href="https://www.instagram.com/who" target="_blank" rel="noopener noreferrer">Instagram</a></li>
-          </ul>
-        </div>
-
-        {/* Contact Information */}
-        <div className="footer-section contact-info">
-          <h4>Contact Information</h4>
-          <p>Email: <a href="mailto:support@diseasepredict.com">support@diseasepredict.com</a></p>
-          <p>Phone: +1 234 567 890</p>
-        </div>
-
-        {/* Certifications & Trust */}
-        <div className="footer-section certifications">
-          <h4>Certifications & Trust</h4>
-          <p>We adhere to the highest standards of data protection and medical guidelines. Certified by WHO and HIPAA compliant.</p>
-        </div>
-      </div>
-
-      {/* Footer Bottom */}
-      <div className="footer-bottom">
-        <p>&copy; 2025 Disease Prediction App. All rights reserved.</p>
       </div>
     </footer>
   );

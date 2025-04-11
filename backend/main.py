@@ -9,7 +9,7 @@ app = FastAPI()
 # ✅ Updated frontend origin
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],  # Vite (React) default port
+    allow_origins=["*"],  # Vite (React) default port
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
