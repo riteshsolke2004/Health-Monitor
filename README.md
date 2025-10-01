@@ -40,12 +40,14 @@ Make sure you have installed:
    cd HealthMonitor
 
 2. ** Backend Setup**
+```bash
 cd backend
 pip install -r requirements.txt
 flask run
 Frontend Setup
 
-3. ** frontend Setup
+4. ** frontend Setup
+```bash
 cd frontend
 npm install
 npm start
