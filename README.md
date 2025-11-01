@@ -18,12 +18,7 @@ The **Health Monitor System** is a comprehensive web-based platform designed to 
 - **Database:** MongoDB  
 - **Machine Learning:** Python ML models for disease prediction  
 
----
 
-## 📸 Screenshots (optional)
-_Add screenshots or GIFs of your app here to showcase the UI and analytics._
-
----
 
 ## 🚀 Getting Started
 
