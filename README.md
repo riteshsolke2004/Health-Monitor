@@ -3,7 +3,7 @@
 The **Health Monitor System** is a comprehensive web-based platform designed to help users monitor their health, predict potential diseases, and interact with a chatbot for personalized guidance. The system also provides **visual health analytics** to track trends and insights over time.
 
 ---
-
+ 
 ## ✨ Features
 - 🩺 **Disease Prediction** – Predicts potential diseases based on user-input symptoms using ML models.  
 - 💬 **Chatbot Interaction** – Provides AI-driven health guidance and answers user queries.  
